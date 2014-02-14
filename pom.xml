@@ -32,7 +32,7 @@
   <description>
     This plugin provides interfaces for OAuth credentials in Jenkins.
   </description>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/OAuth+Credentials+Plugin</url>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/OAuth+Credentials</url>
   <licenses>
     <license>
       <name>The Apache V2 License</name>
