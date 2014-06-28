@@ -10,7 +10,7 @@ Development
 How to build
 --------------
 
-	mvn clean package
+	mvn clean verify
 
 Creates the plugin HPI package for use with Jenkins.
 
