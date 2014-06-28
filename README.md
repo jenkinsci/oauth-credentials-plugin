@@ -2,6 +2,8 @@ Jenkins OAuth Credentials Plugin
 =====================
 Jenkins plugin library for interfaces related to OAuth credentials
 
+[![Build Status](https://jenkins.ci.cloudbees.com/buildStatus/icon?job=plugins/oauth-credentials)](https://jenkins.ci.cloudbees.com/job/plugins/job/oauth-credentials/)
+
 Read more: [http://wiki.jenkins-ci.org/display/JENKINS/OAuth+Credentials](http://wiki.jenkins-ci.org/display/JENKINS/OAuth+Credentials)
 
 Development
