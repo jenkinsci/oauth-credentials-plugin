@@ -32,7 +32,7 @@
   <description>
     This plugin provides interfaces for OAuth credentials in Jenkins.
   </description>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/OAuth+Credentials</url>
+  <url>https://github.com/jenkinsci/oauth-credentials-plugin/blob/master/Documentation.adoc</url>
   <licenses>
     <license>
       <name>The Apache V2 License</name>
@@ -49,9 +49,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}.git</developerConnection>
-    <url>http://github.com/jenkinsci/${project.artifactId}</url>
+    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
     <tag>HEAD</tag>
   </scm>
 
