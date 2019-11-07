@@ -43,7 +43,7 @@ public class DescribableDomainRequirementProvider
   @Override
   protected <T extends DomainRequirement> List<T> provide(Class<T> type) {
     ExtensionList<Descriptor> extensions =
-        Jenkins.getInstance().getExtensionList(Descriptor.class);
+        Jenkins.get().getExtensionList(Descriptor.class);
 
     List<T> result = Lists.newArrayList();
     for (ExtensionComponent<Descriptor> component :

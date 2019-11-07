@@ -217,7 +217,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, hasItems(mockCredentials));
   }
@@ -237,7 +237,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, not(hasItems(mockCredentials)));
   }
@@ -256,7 +256,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, hasItems(mockCredentials));
   }
@@ -277,7 +277,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, hasItems(mockCredentials));
   }
@@ -297,7 +297,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, hasItems(mockCredentials));
   }
@@ -317,7 +317,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestRequirement(
+            Jenkins.get(), ACL.SYSTEM, new TestRequirement(
                 ImmutableList.of(GOOD_SCOPE1)));
 
     assertThat(matchingCredentials, hasItems(mockCredentials));
@@ -338,7 +338,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestBadRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestBadRequirement());
 
     assertThat(matchingCredentials, not(hasItems(mockCredentials)));
   }
@@ -358,7 +358,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestGoodRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestGoodRequirement());
 
     assertThat(matchingCredentials, not(hasItems(mockCredentials)));
   }
@@ -378,7 +378,7 @@ public class OAuth2ScopeSpecificationTest {
 
     List<OAuth2Credentials> matchingCredentials =
         CredentialsProvider.lookupCredentials(OAuth2Credentials.class,
-            Jenkins.getInstance(), ACL.SYSTEM, new TestBadRequirement());
+            Jenkins.get(), ACL.SYSTEM, new TestBadRequirement());
 
     assertThat(matchingCredentials, not(hasItems(mockCredentials)));
   }

@@ -60,7 +60,7 @@ public class DescribableDomainRequirementProviderTest {
 
     @Override
     public DescriptorImpl getDescriptor() {
-      return (DescriptorImpl) Jenkins.getInstance().getDescriptorOrDie(
+      return (DescriptorImpl) Jenkins.get().getDescriptorOrDie(
         getClass());
     }
 
@@ -121,7 +121,7 @@ public class DescribableDomainRequirementProviderTest {
 
     @Override
     public DescriptorImpl getDescriptor() {
-      return (DescriptorImpl) Jenkins.getInstance().getDescriptorOrDie(
+      return (DescriptorImpl) Jenkins.get().getDescriptorOrDie(
         getClass());
     }
 
@@ -165,7 +165,7 @@ public class DescribableDomainRequirementProviderTest {
 
     @Override
     public DescriptorImpl getDescriptor() {
-      return (DescriptorImpl) Jenkins.getInstance().getDescriptorOrDie(
+      return (DescriptorImpl) Jenkins.get().getDescriptorOrDie(
         getClass());
     }
 

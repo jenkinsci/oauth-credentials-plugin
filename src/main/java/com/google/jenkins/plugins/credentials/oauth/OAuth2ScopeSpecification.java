@@ -28,6 +28,7 @@ import com.cloudbees.plugins.credentials.domains.DomainSpecificationDescriptor;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Sets;
 import com.google.jenkins.plugins.credentials.domains.DomainRequirementProvider;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 /**
  * The base class for provider-specific specifications, instantiated with the
@@ -59,7 +60,7 @@ public abstract class OAuth2ScopeSpecification<T extends OAuth2ScopeRequirement>
    * @return the result of the test.
    */
   @Override
-  @edu.umd.cs.findbugs.annotations.SuppressWarnings("BC_UNCONFIRMED_CAST")
+  @SuppressFBWarnings("BC_UNCONFIRMED_CAST")
   public final Result test(DomainRequirement requirement) {
     Class<T> providerRequirement = getDescriptor().getProviderRequirement();
 
