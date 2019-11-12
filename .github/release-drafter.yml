@@ -1,0 +1,3 @@
+_extends: .github
+tag-template: oauth-credentials-$NEXT_PATCH_VERSION
+
