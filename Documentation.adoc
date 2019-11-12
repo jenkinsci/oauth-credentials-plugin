@@ -1,0 +1,62 @@
+== OAuth Credentials Plugin
+
+This plugin library allows OAuth providers to surface OAuth credentials in Jenkins.
+
+NOTE: By itself, this library has no user visible changes, it is intended only to surface new extension points on top of which OAuth providers may surface their own OAuth2Credentials implementations.
+
+=== Information for Plugin Developers
+
+This extends the standard Credentials library with the following OAuth 2.0 concepts:
+
+* `OAuth2ScopeRequirement`
+** Surfaces a list of OAuth scopes that a plugin requires for accessing a provider's API.
+
+* `OAuth2ScopeSpecification<T extends OAuth2ScopeRequirement>`
+** Allows administrators to limit the set of OAuth scopes a given OAuth2Credentials provides to plugins
+
+* `OAuth2Credentials<T extends OAuth2ScopeRequirement>`
+** Provides an OAuth2 access token with the scopes requested via a `T` argument.
+
+It is expected that OAuth providers will extend these classes as follows:
+
+* `AcmeRequirement extends OAuth2ScopeRequirement`
+* `AcmeSpecification extends OAuth2ScopeSpecification<AcmeRequirement>`
+* `AcmeCredentials extends OAuth2Credentials<AcmeRequirement>`
+
+Now plugins that consume "Acme" APIs can filter for credentials that surface sufficient scopes for their API via:
+
+[source, java]
+----
+c = CredentialsProvider.lookupCredentials(AcmeCredentials.class, ..., myAcmeRequirements);
+----
+
+When accessing the API, a user would retrieve the OAuth token with:
+
+[source, java]
+----
+token = c.getAccessToken(myAcmeRequirements);
+----
+
+==== Consuming AcmeRequirements in Plugins
+
+To avoid requiring users to type out OAuth scopes as part of their specification, the OAuth2ScopeSpecification supports the discovery of OAuth2ScopeRequirements annotated on installed plugins.
+If a user annotates:
+
+[source, java]
+----
+@RequiresDomain(value = MyAcmeRequirement.class)
+public class MyAcmePlugin {}
+----
+
+The `DomainRequirementProvider` class will try to discover these and surface all discoverable scopes to the user as specification choices.
+This plugin provides a `DescribableDomainRequirementProvider` for discovering these annotations on any installed `Describable` extensions, but `DomainRequirementProvider` is an extension point so it can be extended to surface new discovery mechanisms.
+
+==== See Also
+
+link:https://github.com/jenkinsci/google-oauth-plugin[Google OAuth plugin] for an example of how this looks.
+
+== Version History
+
+=== Version 0.3 (Feb 13, 2014)
+
+* Initial release

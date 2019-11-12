@@ -1,5 +1,10 @@
-.*
+### Maven
 target/
-work/
-*/.gitignore
 
+### Jenkins
+work/
+
+### IntelliJ IDEA
+*.ipr
+*.iml
+.idea/

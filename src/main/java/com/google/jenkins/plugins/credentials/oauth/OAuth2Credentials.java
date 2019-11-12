@@ -17,6 +17,9 @@ package com.google.jenkins.plugins.credentials.oauth;
 
 import com.cloudbees.plugins.credentials.Credentials;
 
+import com.cloudbees.plugins.credentials.CredentialsDescriptor;
+import edu.umd.cs.findbugs.annotations.NonNull;
+import hudson.Extension;
 import hudson.util.Secret;
 
 /**
@@ -34,4 +37,22 @@ public interface OAuth2Credentials<T extends OAuth2ScopeRequirement>
    * @return the scoped access token
    */
   Secret getAccessToken(T requirement);
+
+  /**
+   * Our descriptor.
+   */
+  @Extension
+  public static class DescriptorImpl extends CredentialsDescriptor {
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @NonNull
+    public String getDisplayName() {
+      return "OAuth Credentials";
+    }
+
+  }
 }

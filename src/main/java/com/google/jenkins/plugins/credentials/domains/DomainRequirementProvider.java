@@ -28,7 +28,7 @@ import com.google.common.collect.Lists;
 
 import hudson.ExtensionList;
 import hudson.ExtensionPoint;
-import hudson.model.Hudson;
+import jenkins.model.Jenkins;
 
 /**
  * This {@link ExtensionPoint} serves as a means for plugins to augment the
@@ -69,7 +69,7 @@ public abstract class DomainRequirementProvider implements ExtensionPoint {
       Class<T> type) {
     ExtensionList<DomainRequirementProvider> providers;
     try {
-      providers = Hudson.getInstance().getExtensionList(
+      providers = Jenkins.get().getExtensionList(
           DomainRequirementProvider.class);
     } catch (Exception e) {
       logger.log(SEVERE, e.getMessage(), e);
@@ -91,8 +91,7 @@ public abstract class DomainRequirementProvider implements ExtensionPoint {
   @Nullable
   public static <T extends DomainRequirement> T of(Class<?> type,
       Class<T> requirementType) {
-    RequiresDomain requiresDomain =
-        (RequiresDomain) type.getAnnotation(RequiresDomain.class);
+    RequiresDomain requiresDomain = type.getAnnotation(RequiresDomain.class);
     if (requiresDomain == null) {
       // Not annotated with @RequiresDomain
       return null;
@@ -106,10 +105,7 @@ public abstract class DomainRequirementProvider implements ExtensionPoint {
     try {
       // Add an instance of the annotated requirement
       return (T) requiresDomain.value().newInstance();
-    } catch (InstantiationException e) {
-      logger.log(SEVERE, e.getMessage(), e);
-      return null;
-    } catch (IllegalAccessException e) {
+    } catch (InstantiationException | IllegalAccessException e) {
       logger.log(SEVERE, e.getMessage(), e);
       return null;
     }
