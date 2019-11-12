@@ -44,6 +44,14 @@
       <id>mattmoor</id>
       <name>Matt Moore</name>
     </developer>
+    <developer>
+      <id>alecharp</id>
+      <name>Adrien Lecharpentier</name>
+    </developer>
+    <developer>
+      <id>varyvol</id>
+      <name>Evaristo Gutierrez</name>
+    </developer>
   </developers>
 
   <scm>
