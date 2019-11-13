@@ -23,7 +23,7 @@
 
   <artifactId>oauth-credentials</artifactId>
   <packaging>hpi</packaging>
-  <version>0.4-beta</version>
+  <version>${revision}${changelist}</version>
 
   <name>OAuth Credentials plugin</name>
   <description>
@@ -57,7 +57,7 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>oauth-credentials-0.4-beta</tag>
+    <tag>${scmTag}</tag>
   </scm>
 
   <properties>
