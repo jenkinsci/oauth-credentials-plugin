@@ -57,6 +57,8 @@ link:https://github.com/jenkinsci/google-oauth-plugin[Google OAuth plugin] for a
 
 == Version History
 
+See https://github.com/jenkinsci/oauth-credentials-plugin/releases for any releases after `0.3`.
+
 === Version 0.3 (Feb 13, 2014)
 
 * Initial release
