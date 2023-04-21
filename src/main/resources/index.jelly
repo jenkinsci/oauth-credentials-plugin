@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Provides interfaces for OAuth credentials in Jenkins.
+</div>
