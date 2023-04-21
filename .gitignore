@@ -8,3 +8,8 @@ work/
 *.ipr
 *.iml
 .idea/
+
+### eclipse
+.classpath
+.project
+.settings/
