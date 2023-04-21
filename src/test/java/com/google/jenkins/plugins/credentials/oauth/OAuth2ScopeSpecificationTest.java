@@ -20,8 +20,8 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.not;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,7 +43,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.jenkins.plugins.credentials.domains.DomainRequirementProvider;
 
 import hudson.Extension;
-import hudson.model.Descriptor;
 import hudson.security.ACL;
 import jenkins.model.Jenkins;
 

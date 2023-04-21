@@ -16,7 +16,7 @@
 package com.google.jenkins.plugins.credentials.domains;
 
 import static java.util.logging.Level.SEVERE;
-
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -104,8 +104,8 @@ public abstract class DomainRequirementProvider implements ExtensionPoint {
 
     try {
       // Add an instance of the annotated requirement
-      return (T) requiresDomain.value().newInstance();
-    } catch (InstantiationException | IllegalAccessException e) {
+      return (T) requiresDomain.value().getDeclaredConstructor().newInstance();
+    } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
       logger.log(SEVERE, e.getMessage(), e);
       return null;
     }
