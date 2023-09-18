@@ -37,22 +37,4 @@ public interface OAuth2Credentials<T extends OAuth2ScopeRequirement>
    * @return the scoped access token
    */
   Secret getAccessToken(T requirement);
-
-  /**
-   * Our descriptor.
-   */
-  @Extension
-  public static class DescriptorImpl extends CredentialsDescriptor {
-
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @NonNull
-    public String getDisplayName() {
-      return "OAuth Credentials";
-    }
-
-  }
 }

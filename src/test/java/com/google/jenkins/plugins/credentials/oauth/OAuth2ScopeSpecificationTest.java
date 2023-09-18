@@ -23,10 +23,15 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 
+import com.cloudbees.plugins.credentials.CredentialsDescriptor;
+import com.cloudbees.plugins.credentials.CredentialsScope;
+import edu.umd.cs.findbugs.annotations.NonNull;
+import hudson.util.Secret;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.TestExtension;
 import org.jvnet.hudson.test.WithoutJenkins;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -179,7 +184,7 @@ public class OAuth2ScopeSpecificationTest {
 
   /**
    */
-  @Extension
+  @TestExtension
   public static class CustomProvider extends DomainRequirementProvider {
     @Override
     protected <T extends DomainRequirement> List<T> provide(Class<T> type) {
@@ -202,8 +207,7 @@ public class OAuth2ScopeSpecificationTest {
     assertThat(discovered, not(hasItems(BAD_SCOPE)));
   }
 
-  @Mock
-  private OAuth2Credentials mockCredentials;
+  private OAuth2Credentials mockCredentials = new MockOAuthCredentials();
 
   /**
    * Verify that credentials that appear outside of a domain with
@@ -380,6 +384,34 @@ public class OAuth2ScopeSpecificationTest {
             Jenkins.get(), ACL.SYSTEM, new TestBadRequirement());
 
     assertThat(matchingCredentials, not(hasItems(mockCredentials)));
+  }
+
+  public static final class MockOAuthCredentials implements OAuth2Credentials {
+
+    @Override
+    public Secret getAccessToken(OAuth2ScopeRequirement requirement) {
+      return null;
+    }
+
+    @Override
+    public CredentialsScope getScope() {
+      return null;
+    }
+
+    @NonNull
+    @Override
+    public CredentialsDescriptor getDescriptor() {
+      return (DescriptorImpl) Jenkins.get().getDescriptorOrDie(getClass());
+    }
+
+    @TestExtension
+    public static class DescriptorImpl extends CredentialsDescriptor {
+      @Override
+      @NonNull
+      public String getDisplayName() {
+        return "OAuth Mock Credentials";
+      }
+    }
   }
 
 
