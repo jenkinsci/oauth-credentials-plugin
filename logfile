@@ -1,0 +1,126 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.jenkins-ci.plugins:oauth-credentials >--------------
+[INFO] Building OAuth Credentials plugin 0.6-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ hpi ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ oauth-credentials ---
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:validate (default-validate) @ oauth-credentials ---
+[INFO] Created marker file /home/mwaite/all/popular-250/oauth-credentials-plugin/target/java-level/17
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:validate-hpi (default-validate-hpi) @ oauth-credentials ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (display-info) @ oauth-credentials ---
+[INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 3: org.apache.maven.enforcer.rules.RequirePluginVersions passed
+[INFO] Rule 4: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+[INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] Rule 6: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] Rule 7: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (no-snapshots-in-release) @ oauth-credentials ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+[INFO] 
+[INFO] --- localizer:1.31:generate (default) @ oauth-credentials ---
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (check-junit-imports) @ oauth-credentials ---
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ oauth-credentials ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.7.3:flatten (flatten) @ oauth-credentials ---
+[INFO] Generating flattened POM of project org.jenkins-ci.plugins:oauth-credentials:hpi:0.6-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ oauth-credentials ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug parameters release 17] to target/classes
+[INFO] com.google.jenkins.plugins.credentials.domains.DescribableDomainRequirementProvider indexed under hudson.Extension
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/main/java/com/google/jenkins/plugins/credentials/domains/DomainRequirementProvider.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/main/java/com/google/jenkins/plugins/credentials/domains/DomainRequirementProvider.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- access-modifier-checker:1.35:enforce (default-enforce) @ oauth-credentials ---
+[INFO] 
+[INFO] --- bridge-method-injector:1.32:process (default) @ oauth-credentials ---
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:insert-test (default-insert-test) @ oauth-credentials ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (createTempDir) @ oauth-credentials ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /home/mwaite/all/popular-250/oauth-credentials-plugin/target/tmp
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ oauth-credentials ---
+[INFO] skip non existing resourceDirectory /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ oauth-credentials ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] com.google.jenkins.plugins.credentials.oauth.OAuth2ScopeSpecificationTest.CustomProvider indexed under org.jvnet.hudson.test.TestExtension
+[INFO] com.google.jenkins.plugins.credentials.oauth.OAuth2ScopeSpecificationTest.MockOAuthCredentials.DescriptorImpl indexed under org.jvnet.hudson.test.TestExtension
+[INFO] com.google.jenkins.plugins.credentials.domains.DescribableDomainRequirementProviderTest.TestRobotBuilder.DescriptorImpl indexed under hudson.Extension
+[INFO] com.google.jenkins.plugins.credentials.domains.DescribableDomainRequirementProviderTest.TestRobotBuilderBad.DescriptorImpl indexed under hudson.Extension
+[INFO] com.google.jenkins.plugins.credentials.domains.DescribableDomainRequirementProviderTest.TestRobotBuilderBadAgain.DescriptorImpl indexed under hudson.Extension
+[INFO] com.google.jenkins.plugins.credentials.oauth.OAuth2ScopeSpecificationTest.TestSpec.DescriptorImpl indexed under hudson.Extension
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java: /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java uses or overrides a deprecated API.
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java: /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java uses unchecked or unsafe operations.
+[INFO] /home/mwaite/all/popular-250/oauth-credentials-plugin/src/test/java/com/google/jenkins/plugins/credentials/oauth/OAuth2ScopeSpecificationTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:test-hpl (default-test-hpl) @ oauth-credentials ---
+[INFO] Generating /home/mwaite/all/popular-250/oauth-credentials-plugin/target/test-classes/the.hpl
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:resolve-test-dependencies (default-resolve-test-dependencies) @ oauth-credentials ---
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:test-runtime (default-test-runtime) @ oauth-credentials ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ oauth-credentials ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- license:184.v19c87b_6b_a_9a_c:process (default) @ oauth-credentials ---
+[INFO] Generated /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials/WEB-INF/licenses.xml
+[INFO] 
+[INFO] --- hpi:3.1762.vd3ff902a_5b_c4:hpi (default-hpi) @ oauth-credentials ---
+[INFO] Generating /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials/META-INF/MANIFEST.MF
+[INFO] Checking for attached .jar artifact ...
+[INFO] Generating jar /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials.jar
+[INFO] Building jar: /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials.jar
+[INFO] Exploding webapp...
+[INFO] Copy webapp webResources to /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials
+[INFO] Assembling webapp oauth-credentials in /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials
+[INFO] Bundling direct dependency hamcrest-2.2.jar
+[WARNING] Expected list of bundled artifacts [] did not match actual list of bundled artifacts [hamcrest]. Review the bundled artifacts and add `<hpi.bundledArtifacts>hamcrest</hpi.bundledArtifacts>` to `<properties>` in pom.xml if the actual list is correct. If the actual list is not correct, add `<exclusion>`s or modify dependencies as needed to prevent the artifacts from being bundled. Review https://www.jenkins.io/doc/developer/plugin-development/dependencies-and-class-loading/#bundling-third-party-libraries for more details. Enable strict checks by adding `<hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>` to pom.xml
+[INFO] Generating hpi /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials.hpi
+[INFO] Building jar: /home/mwaite/all/popular-250/oauth-credentials-plugin/target/oauth-credentials.hpi
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (maybe-test-jar) @ oauth-credentials ---
+[INFO] Skipping packaging of the test-jar
+[INFO] 
+[INFO] >>> spotbugs:4.9.8.1:check (spotbugs) > :spotbugs @ oauth-credentials >>>
+[INFO] 
+[INFO] --- spotbugs:4.9.8.1:spotbugs (spotbugs) @ oauth-credentials ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] Skipping com.github.spotbugs:spotbugs-maven-plugin:4.9.8.1:spotbugs report goal
+[INFO] 
+[INFO] <<< spotbugs:4.9.8.1:check (spotbugs) < :spotbugs @ oauth-credentials <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.9.8.1:check (spotbugs) @ oauth-credentials ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] 
+[INFO] --- spotless:3.0.0:check (default) @ oauth-credentials ---
+[INFO] Spotless check skipped
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.865 s
+[INFO] Finished at: 2026-01-09T17:26:55-07:00
+[INFO] ------------------------------------------------------------------------
