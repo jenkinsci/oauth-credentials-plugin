@@ -20,11 +20,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.annotation.Nullable;
-
 import com.cloudbees.plugins.credentials.domains.DomainRequirement;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
+import edu.umd.cs.findbugs.annotations.Nullable;
 
 import hudson.ExtensionList;
 import hudson.ExtensionPoint;
