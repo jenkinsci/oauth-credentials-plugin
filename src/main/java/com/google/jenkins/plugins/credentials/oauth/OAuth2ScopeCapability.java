@@ -12,8 +12,8 @@ import java.util.Objects;
  */
 public final class OAuth2ScopeCapability {
 
-  public static final OAuth2ScopeCapability SEND_EMAIL =
-      new OAuth2ScopeCapability("SEND_EMAIL");
+  public static final OAuth2ScopeCapability SMTP_AUTHENTICATE =
+      new OAuth2ScopeCapability("SMTP_AUTHENTICATE");
 
   private final String id;
 
@@ -24,7 +24,7 @@ public final class OAuth2ScopeCapability {
   /**
    * Creates a capability not covered by predefined constants.
    *
-   * @param id unique capability id, e.g. {@code "SEND_EMAIL"}
+   * @param id unique capability id, e.g. {@code "SMTP_AUTHENTICATE"}
    * @return capability instance for the given id
    */
   @NonNull
